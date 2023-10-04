@@ -14,5 +14,4 @@ if __name__ == "__main__":
         solution.hammingWeight(222),
         solution.hammingWeight(1),
         solution.hammingWeight(23123123)
-    )
-    
+    )    
