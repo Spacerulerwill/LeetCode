@@ -1,9 +1,10 @@
+# https://leetcode.com/problems/word-pattern/
+
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
         words = s.split()
         if len(pattern) != len(words):
-            return False
-        
+            return False      
         word_map = {}
         words_used = set()
         for char, word in zip(pattern, words):
