@@ -72,7 +72,6 @@ class Solution:
                             token_idx += 1
                 case Token.LEFT_PARENTHESIS:
                     unary_operators = []
-                    save_idx = token_idx
                     if token_idx > 0:
                         while tokens[token_idx - 1] == Token.NEGATE:
                             unary_operators.append(Token.NEGATE)
