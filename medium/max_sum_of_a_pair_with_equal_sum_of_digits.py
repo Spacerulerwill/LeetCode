@@ -7,7 +7,7 @@ class Solution:
             digit_sum = 0
             while num:
                 digit_sum += num % 10
-                num = num // 10
+                num //= 10
             if digit_sum in seen:
                 potential_new_max = num_save + seen[digit_sum]
                 _max = max(_max, potential_new_max)
