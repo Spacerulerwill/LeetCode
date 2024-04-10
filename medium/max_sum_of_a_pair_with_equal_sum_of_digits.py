@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/
+
 class Solution:
     def maximumSum(self, nums: list[int]) -> int:
         seen = {}
