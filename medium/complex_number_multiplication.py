@@ -13,7 +13,6 @@ class Solution:
 
         return f"{(num1_real * num2_real) - (num1_imaginary * num2_imaginary)}+{(num1_real * num2_imaginary) + (num1_imaginary * num2_real)}i"
 
-
 if __name__ == "__main__":
     solution = Solution()
     print(solution.complexNumberMultiply("1+1i", "1+1i"))
