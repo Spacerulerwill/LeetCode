@@ -18,8 +18,6 @@ class Solution:
                 chunk += digit * 10**i
                 num //= 10
             chunks.append(chunk)
-        print(chunks)
-    
         # converts chunks of < 1000 into words
         result = []
         for idx in range(len(chunks)):
@@ -30,7 +28,6 @@ class Solution:
             else:
                 if idx - 1 >= 0 and chunks[idx-1] != 0:
                     result.append(others[idx-1])
-
                 if 10 < chunk % 100 < 20:
                     if chunk // 100 != 0:
                         # 3 digit
