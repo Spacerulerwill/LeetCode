@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/first-missing-positive/
 
-"""
+
 class Solution:
     def firstMissingPositive(self, nums: list[int]) -> int:
         smallest = 1
@@ -17,7 +17,6 @@ class Solution:
                 seen.add(num)
         return smallest
 """
-
 class Solution:
     def firstMissingPositive(self, nums: list[int]) -> int:
         if len(nums) == 0:
@@ -32,6 +31,7 @@ class Solution:
                 if new[i+1] - new[i] > 1:
                     return new[i] + 1
             return new[-1] + 1
+"""
                 
 if __name__ == "__main__":
     solution = Solution()
