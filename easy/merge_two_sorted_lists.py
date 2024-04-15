@@ -20,7 +20,7 @@ class Solution:
                 list2 = list2.next
                 current = current.next
         
-        if list or list2:
+        if list1 or list2:
             if list1:
                 current.next = list1
             else:
