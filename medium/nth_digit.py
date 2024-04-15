@@ -16,6 +16,7 @@ class Solution:
         digits_remaining = n - digit_sum
         number_in = (10**i) + ceil(digits_remaining / (i+1)) - 1
         digit_idx = (digits_remaining-1) % (i+1)
+        # access (digit_idx)th digit from the left
         return (number_in // 10**(i-digit_idx)) % 10
         
 if __name__ == "__main__":
