@@ -19,6 +19,8 @@ class Solution:
             else:
                 dfs(node.left, current_depth + 1)
                 dfs(node.right, current_depth + 1)
+        
+        # handle depth limit of 1 differently
         if depth_limit == 1:
             new_node = TreeNode(val, root, None)
             return new_node
