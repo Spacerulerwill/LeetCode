@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/add-digits/
 
+"""
+O(n)
 class Solution:
     def addDigits(self, num: int) -> int:
         if num < 10:
@@ -12,6 +14,7 @@ class Solution:
                 num_save //= 10
             num = digit_sum
         return num
+"""
     
 class Solution:
     def addDigits(self, num: int) -> int:
