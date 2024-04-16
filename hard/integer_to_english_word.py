@@ -55,4 +55,4 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.numberToWords(1000000))
+    print(solution.numberToWords(5742))
