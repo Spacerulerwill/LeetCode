@@ -2,6 +2,7 @@
 
 from operator import mul
 
+# Follow up - how can I do this in O(1) space?
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         # prefix products
