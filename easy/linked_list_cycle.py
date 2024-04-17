@@ -21,11 +21,14 @@ class Solution:
             if fast is slow:
                 return True
             fast = fast.next
+            # if fast pointer is null, no cycle
             if not fast:
                 return False
+            # if fast pointer and slow pointer meet, there is a cycle
             if fast is slow:
                 return True
             #advance slow pointer
             slow = slow.next
+            # if fast and slow pointer meet, there is a cycle
             if slow is fast:
                 return True
