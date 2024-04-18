@@ -50,8 +50,6 @@ class Solution:
         lines.append(last_line)
         return lines
 
-
-
 if __name__ == "__main__":
     solution = Solution()
     print(solution.fullJustify(["This", "is", "an", "example", "of", "text", "justification."], 16))
