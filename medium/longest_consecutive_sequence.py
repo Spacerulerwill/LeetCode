@@ -12,10 +12,6 @@ class Solution:
                 max_consecutive = max(max_consecutive, i)
         return max_consecutive
 
-
-
-
-
 if __name__ == "__main__":
     solution = Solution()
     print(solution.longestConsecutive([100,4,200,1,3,2]))
