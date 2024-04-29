@@ -6,11 +6,9 @@ class Solution:
         def backtrack(current:list=[], sum:int = 0, idx:int = 0):
             if sum == target:
                 res.append(current)
-                return
-            
+                return    
             if idx == len(candidates) or sum > target:
-                return
-            
+                return   
             backtrack(current + [candidates[idx]], sum + candidates[idx], idx)
             backtrack(current, sum, idx + 1)
         backtrack()
