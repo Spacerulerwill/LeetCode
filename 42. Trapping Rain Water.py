@@ -20,8 +20,7 @@ class Solution:
                 for j in range(cur_max[1], i, -1):
                     total += cur_max[0] - height[j]
                 cur_max = (height[i], i)
-        return total
-        
+        return total      
 
 if __name__ == "__main__":
     solution = Solution()
