@@ -3,7 +3,6 @@
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
         low = 0
-
         try:
             high = word.index(ch)
         except ValueError:
