@@ -6,8 +6,7 @@ class Solution:
         try:
             high = word.index(ch)
         except ValueError:
-            return word
-        
+            return word     
         word_split = list(word)
         while low < high:
             word_split[low], word_split[high] = word_split[high], word_split[low]

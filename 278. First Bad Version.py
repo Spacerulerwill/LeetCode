@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/first-bad-version/
 
+def isBadVersion():
+    ...
+
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         low = 1
