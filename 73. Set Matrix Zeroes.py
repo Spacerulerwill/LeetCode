@@ -21,4 +21,4 @@ class Solution:
                     
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]]))
+    solution.setZeroes([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
