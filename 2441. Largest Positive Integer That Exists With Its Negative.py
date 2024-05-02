@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/
 
 class Solution:
-    def findMaxK(self, nums: List[int]) -> int:
+    def findMaxK(self, nums: list[int]) -> int:
         seen = set()
         _max = -1
         for num in nums:
