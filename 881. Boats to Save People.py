@@ -4,7 +4,6 @@ class Solution:
     def numRescueBoats(self, people: list[int], limit: int) -> int:
         numRescueBoats = 0
         people.sort()
-        print(people)
         left = 0
         right = len(people) - 1
         while left <= right:
