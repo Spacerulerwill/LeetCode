@@ -1,69 +1,31 @@
 # https://leetcode.com/problems/basic-calculator-ii
+# Time Complexity: O(n), Space Complexity: O(1)
 class Solution:
     def calculate(self, s: str) -> int:
-        last_operand = 1
-        last_operator = "*"
-        current_operator = None
+        current_operand = 0
         total = 0
-        i = 0
-        while i < len(s):
-            char = s[i]
-            if char == " ":
-                i += 1
-                continue
+        last_operator = "+"
+        last_operand = 0
+        for i, char in enumerate(s):
             if char.isdigit():
-                # consume operand
-                operand = 0
-                while i < len(s) and s[i].isdigit():
-                    operand = operand * 10 + int(s[i])
-                    i += 1
-                i -= 1
-                if current_operator:
-                    match current_operator:
-                        case "+":
-                            total += operand
-                            last_operator = "+"
-                            last_operand = operand
-                            last_operand = operand
-                        case "-":
-                            total -= operand
-                            last_operator = "-"
-                            last_operand = operand
-                            last_operand = operand
-                        case "*":
-                            if last_operator == "+":
-                                total -= last_operand
-                                total += (last_operand * operand)
-                                last_operator = "+"
-                                last_operand = last_operand * operand
-                            elif last_operator == "-":
-                                total += last_operand
-                                total -= (last_operand * operand)
-                                last_operator = "-"
-                                last_operand = (last_operand * operand)
-                            else:
-                                total *= operand
-                                last_operator = "*"
-                        case "/":
-                            if last_operator == "+":
-                                total -= last_operand
-                                total += (last_operand // operand)
-                                last_operator = "+"
-                                last_operand = last_operand // operand
-                            elif last_operator == "-":
-                                total += last_operand
-                                total -= (last_operand // operand)
-                                last_operator = "-"
-                                last_operand = (last_operand // operand)
-                            else:
-                                total //= operand
-                                last_operator = "/"
-                else:
-                    total = operand
-            else:
-                current_operator = char
-            i += 1
-        return total
+                current_operand = current_operand * 10 + int(char)
+            if char in {"+", "*", "-", "/"} or i == len(s) - 1:
+                if last_operator == "+":
+                    total += last_operand
+                    last_operand = current_operand
+                elif last_operator == "-":
+                    total += last_operand
+                    last_operand = -current_operand
+                elif last_operator == "*":
+                    last_operand *= current_operand
+                elif last_operator == "/":
+                    if last_operand >= 0:
+                        last_operand //= current_operand
+                    else:
+                        last_operand = -((last_operand * -1) // current_operand)
+                last_operator = char
+                current_operand = 0
+        return total + last_operand
     
 if __name__ == "__main__":
     solution = Solution()
