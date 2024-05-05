@@ -23,7 +23,6 @@ class Solution:
                 longest = even
         return s[longest[0]: longest[1] + 1] 
 
-
 if __name__ == "__main__":
     solution = Solution()
     print(solution.longestPalindrome("cbbd"))
