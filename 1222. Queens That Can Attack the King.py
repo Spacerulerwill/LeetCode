@@ -2,9 +2,10 @@
 
 class Solution:
     def queensAttacktheKing(self, queens: list[list[int]], king: list[int]) -> list[list[int]]:
+        output_queens = []
         # create set of queen positions so we can check if a position if a queen in O(1)
         queen_set = set(tuple(coord) for coord in queens)
-        output_queens = []
+        # check every direction for closest queen
         for direction in [(0,1), (1,0), (0,-1), (-1,0), (1,1), (1,-1), (-1,-1), (-1,1)]:
             start = king[:]
             while start[0] >= 0 and start[0] < 8 and start[1] >= 0 and start[1] < 8 and (king[0], king[1]):
