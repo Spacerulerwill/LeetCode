@@ -1,5 +1,4 @@
 class NumArray:
-
     def __init__(self, nums: list[int]):
         self.prefix_sums = [0]
         prefix_sum = 0
