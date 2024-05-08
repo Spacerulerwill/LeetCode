@@ -8,7 +8,7 @@ class Solution:
         # check every direction for closest queen
         for direction in [(0,1), (1,0), (0,-1), (-1,0), (1,1), (1,-1), (-1,-1), (-1,1)]:
             start = king[:]
-            while start[0] >= 0 and start[0] < 8 and start[1] >= 0 and start[1] < 8 and (king[0], king[1]):
+            while start[0] >= 0 and start[0] < 8 and start[1] >= 0 and start[1] < 8:
                 if tuple(start) in queen_set:
                     output_queens.append(start)
                     break

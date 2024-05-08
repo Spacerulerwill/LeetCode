@@ -23,7 +23,6 @@ class Solution:
                 low = mid + 1
             else:
                 high = mid - 1
-    
         #binary search second half
         low = pivot
         high = len(nums)-1
