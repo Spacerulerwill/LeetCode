@@ -10,6 +10,7 @@ class Solution:
             total += val
             turns += 1
         return total
+    
 if __name__ == "__main__":
     solution = Solution()
     print(solution.maximumHappinessSum([12,1,42], 3))
