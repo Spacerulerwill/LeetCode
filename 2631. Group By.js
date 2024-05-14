@@ -6,8 +6,10 @@ Array.prototype.groupBy = function(fn) {
     let res = {}
     this.forEach((val, idx) => {
         let key = fn(val)
-        if key in res {
-            
+        if (key in res) {
+            res[key].push(val);
+        } else {
+            res[key] = [val];
         }
     });
     return res

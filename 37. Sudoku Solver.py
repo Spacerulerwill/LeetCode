@@ -28,7 +28,7 @@ class Solution:
                             return True
                         else:
                             board[r][c] = "."
-                # should never reach here, as it will always have a solution, but its good to have anyway
-                return False
+            # should never reach here, as it will always have a solution, but its good to have anyway
+            return False
         solve()
         
