@@ -8,7 +8,6 @@ class Solution:
                 letter_counts[letter] += 1
             else:
                 letter_counts[letter] = 1
-        
         largest_odd_count = 0
         largest_odd_letter = None
         # find largest odd numbered letter - that will be center
@@ -24,7 +23,6 @@ class Solution:
         for count in letter_counts.values():
             length += (count // 2) * 2
         return length
-
 
 if __name__ == "__main__":
     solution = Solution()
