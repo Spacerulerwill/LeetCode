@@ -8,10 +8,11 @@ class MergeSort:
         left = nums[:middle]
         right = nums[middle:]
 
+        # recursively split
         self.sortArray(left)
         self.sortArray(right)
 
-        # merge
+        # merge two sorted arrays
         i = 0 # left arr index
         j = 0 # right arr index
         k = 0 # merged arr index
@@ -23,21 +24,19 @@ class MergeSort:
                 nums[k] = right[j]
                 j += 1
             k += 1
-            
+        
+        # any remaining in left array?
         while i < len(left):
             nums[k] = left[i]
             i += 1
             k += 1
-
+         
+        # any remaining in right array?
         while j < len(right):
             nums[k] = right[j]
             j += 1
             k += 1
         return nums
-
-class QuickSort:
-    def sortArray(self, nums: list[int]) -> list[int]:
-        ...
 
 if __name__ == "__main__":
     merge = MergeSort()
