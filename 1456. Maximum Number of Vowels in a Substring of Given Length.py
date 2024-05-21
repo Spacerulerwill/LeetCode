@@ -19,6 +19,7 @@ class Solution:
             right += 1
             _max = max(_max, current_vowels)
         return _max
+    
 if __name__ == "__main__":
     solution = Solution()
     print(solution.maxVowels("abciiidef", 3))
