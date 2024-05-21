@@ -15,5 +15,3 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
     print(solution.subsets([1,2,3]))
-
-1,2,3
