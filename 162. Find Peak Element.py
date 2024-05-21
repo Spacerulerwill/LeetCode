@@ -18,7 +18,6 @@ class Solution:
             else:
                 low = mid + 1   
           
-
 if __name__ == "__main__":
     solution = Solution()
     print(solution.findPeakElement([1]))
