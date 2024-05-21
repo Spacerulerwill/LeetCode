@@ -11,15 +11,18 @@ class TreeNode:
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
         _max = 0
-        def dfs(node: Optional[TreeNode], last_left:bool, depth:int):
+        def dfs(node: Optional[TreeNode], last_direction: bool, length: int):
             nonlocal _max
             if not node:
-                _max = max(_max, depth)
+                _max = max(_max, length - 1)
                 return
-            if last_left:
-                dfs(node.right, not last_left, depth+1)
+            if last_direction:
+                dfs(node.left, False, length + 1)
+                dfs(node.right, True, 1)
             else:
-                dfs(node.left, not last_left, depth+1)
-        dfs(root, False, 0)
-        dfs(root, True, 0)
+                dfs(node.left, False, 1)
+                dfs(node.right, True, length + 1)
+        if root:
+            dfs(root.left, False, 1)
+            dfs(root.right, True, 1)
         return _max
