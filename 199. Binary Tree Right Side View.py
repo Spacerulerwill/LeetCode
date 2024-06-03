@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/binary-tree-level-order-traversal/
+# https://leetcode.com/problems/binary-tree-right-side-view/
 
 from typing import Optional
 from collections import deque
@@ -10,12 +10,10 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:
+    def rightSideView(self, root: Optional[TreeNode]) -> list[int]:
         res = []
-
         q = deque()
         q.append(root)
-
         while q:
             len_q = len(q)
             level = []
@@ -26,5 +24,5 @@ class Solution:
                     q.append(node.left)
                     q.append(node.right)
             if level:
-                res.append(level)
+                res.append(level[-1])
         return res
