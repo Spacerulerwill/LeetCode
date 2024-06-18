@@ -32,6 +32,7 @@ class Solution:
                 s[j] = sorted[i]
                 i += 1
         return "".join(s)
+    
 if __name__ == "__main__":
     solution = Solution()
     print(solution.sortVowels("lEetcOde"))
