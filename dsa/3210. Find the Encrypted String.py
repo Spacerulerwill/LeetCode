@@ -2,6 +2,8 @@
 
 class Solution:
     def getEncryptedString(self, s: str, k: int) -> str:
+        # to reduce unneccesary retotation
+        k %= len(s)
         # reverse string
         s = list(s)[::-1]
         # calculate pivot position
