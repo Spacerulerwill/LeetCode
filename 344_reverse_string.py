@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         """
@@ -11,8 +12,3 @@ class Solution:
             s[i], s[j] = s[j], s[i]
             i += 1
             j -= 1
-        
-        
-import string
-
-string.ascii_lowercase

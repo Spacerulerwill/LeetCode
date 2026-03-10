@@ -1,14 +1,17 @@
 from typing import Optional
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-        
+
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         last = None
+
         def traverse(node: Optional[TreeNode]) -> bool:
             nonlocal last
             # no node
@@ -20,5 +23,5 @@ class Solution:
                 return False
             last = node.val
             return traverse(node.right)
-        return traverse(root)
 
+        return traverse(root)

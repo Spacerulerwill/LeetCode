@@ -1,5 +1,6 @@
 import string
 
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         alphanumeric = set(string.ascii_letters + string.digits)

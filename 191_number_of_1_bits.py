@@ -7,7 +7,8 @@ class Solution:
                 count += 1
             i <<= 1
         return count
-    
+
+
 if __name__ == "__main__":
     solution = Solution()
     print(solution.hammingWeight(5))
